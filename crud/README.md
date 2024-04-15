@@ -1,4 +1,4 @@
-## HTTP CRUD Sample
+# CRUD Sample
 
 This is a sample implementation of CRUD (Create, Read, Update, Delete) in Go.
 
@@ -20,32 +20,22 @@ Send data to `POST /items` and `PUT /items/:id` using the following structure:
     "active": true
 }
 ```
+## Running this Sample locally 
 
-## Prerequisites
-
-To run the sample on your local machine, you must have the following software installed:
-
- - Latest [Spin](https://developer.fermyon.com/spin) CLI
- - [Node.js](https://nodejs.org)
-
-## Running this Sample 
-
-### Local (`spin up`)
-
-To run the sample locally, you must provide the `local.toml` as runtime config file as shown in the snippet below:
+To run the sample locally, you must provide the `migrations.sql` using the `--sqlite` flag as shown in the snippet below:
 
 ```bash
 # Build the project
 spin build
 
 # Run the sample
-spin up --sqlite @migrations.sql --runtime-config-file ./local.toml
+spin up --sqlite @migrations.sql
 Logging component stdio to ".spin/logs/"
 Storing default SQLite data to ".spin/sqlite_db.db"
 
 Serving http://127.0.0.1:3000
 Available Routes:
-  http-crud-js-sqlite: http://127.0.0.1:3000 (wildcard)
+  crud: http://127.0.0.1:3000 (wildcard)
 ```
 
 ### Fermyon Cloud
@@ -60,13 +50,12 @@ spin cloud login
 # This will ask if a new database should be created or an existing one should be used
 # Answer the question with "create a new database"
 spin deploy
-Uploading http-crud-js-sqlite version 0.1.0 to Fermyon Cloud...
+Uploading crud version 0.1.0 to Fermyon Cloud...
 Deploying...
-App "http-crud-js-sqlite" accesses a database labeled "crud"
+App "crud" accesses a database labeled "default"
     Would you like to link an existing database or create a new database?: Create a new database and link the app to it
 What would you like to name your database?
-What would you like to name your database?
-    Note: This name is used when managing your database at the account level. The app "http-crud-js-sqlite" will refer to this database by the label "crud".
+    Note: This name is used when managing your database at the account level. The app "http-crud-js-sqlite" will refer to this database by the label "default".
     Other apps can use different labels to refer to the same database.: sincere-mulberry
 Creating database named 'sincere-mulberry'
 Waiting for application to become ready.......... ready
