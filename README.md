@@ -10,4 +10,4 @@ In order to build and run the samples locally, you must have the following softw
  - TinyGo (https://tinygo.org/)
 
 
-For further instructions, see the READMEs located in the sub-folders [`hello-conf42](./hello-conf42/) and [`crud`](./crud/).
+For further instructions, see the READMEs located in the sub-folders [`hello-conf42`](./hello-conf42/) and [`crud`](./crud/).
