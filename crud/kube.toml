@@ -1,0 +1,4 @@
+[sqlite_database.default]
+type = "libsql"
+url = "http://sqld:8080"
+token = ""
